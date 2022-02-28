@@ -1,0 +1,41 @@
+{% extends 'base.html' %}  
+{% load crispy_forms_tags %}
+
+{% block content %}  
+
+  
+<div class = "login">  
+  
+    <!-- {% if messages %}  
+        <ul>   
+            {% for message in messages %}  
+                <li>{{ message }}</li>  
+                {% endfor %}  
+        </ul>   
+    {% endif %}  
+       -->
+    <center>
+
+    <h1>Login - Adcorp</h1>  
+    <h4>
+         <form method="POST" }>  
+             {% csrf_token %}  
+             
+             <table>  
+                {{ form.as_p}}  
+                 <tr> 
+             
+
+                    <td><input type="submit"></td>
+                    <td><button class="btn btn-success"><a href="{% url 'password_reset' %}">reset password</a></button></td>
+                    <td><button class="btn btn-success"><a href="{% url 'register' %}">I don't have an Account</a></button></td>
+
+                </tr>  
+             </table>  
+         </form>  
+         </h4>
+        </center>
+    
+     </div>  
+  
+{% endblock content %}  

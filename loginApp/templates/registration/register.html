@@ -1,0 +1,36 @@
+{% extends 'base.html' %}  
+{% load crispy_forms_tags %}
+
+{% block content %}  
+
+  
+<div class = "login">  
+  
+    {% if messages %}  
+        <ul>   
+            {% for message in messages %}  
+                <li>{{ message }}</li>  
+                {% endfor %}  
+        </ul>   
+    {% endif %}  
+    <center>
+      
+    <h1>Sign In - Adcorp</h1> 
+    <h4> 
+  
+         <form method="post" >  
+             {% csrf_token %}  
+             <table>  
+                {{ form.as_p}}  
+                 <tr>  
+                    <td><button type="submit">SignIn</button></td>
+                <td><button class="btn btn-success"><a href="{% url 'login' %}">LogIn</a></button></td>
+                    
+                </tr>  
+             </table>  
+         </form>  
+        </h4>
+     </center>
+     </div>  
+  
+{% endblock content %}  

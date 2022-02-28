@@ -1,0 +1,19 @@
+<HTML>
+    <HEADER>
+        <TITLE>USER EXIST VERIFIER</TITLE>
+    </HEADER>
+    <BODY>
+    <center><h2>
+            <FORM id="login_form" method="post" action="">
+            {% csrf_token %}
+                    Username:
+                    <input type="text" name="username" value="" id="username" size="50" />
+                <br />
+                    Password:
+                    <input type="password" name="password" value="" id="password" size="50" />
+                    <br />
+            <INPUT type="submit" name="submit" value="submit" />
+            </FORM>
+            </h2></center>
+    </BODY>
+    </HTML>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}  
+{% load crispy_forms_tags %}
+
+{% block content %}  
+
+<body>
+    
+    <h2>
+    <center>
+    <p>You are Logged Out  , Click below to to login page</p>
+    <div>
+        {% csrf_token %}  
+      
+          <a href="{% url 'login' %}">Login</a>
+    </center>
+    </h2>
+  </div>
+  
+  </body>
+
+  {% endblock content %}  
